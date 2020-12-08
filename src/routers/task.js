@@ -50,9 +50,9 @@ router.get('/tasks', auth, async (req, res) => {
         res.status(200).send(req.user.tasks)
 
         // Alternatively
-            // const tasks = await Task.find({ owner: req.user._id })
-            // if(!tasks) return res.status(404).send('Tasks not Found')
-            // res.status(200).send(tasks)
+        // const tasks = await Task.find({ owner: req.user._id })
+        // if(!tasks) return res.status(404).send('Tasks not Found')
+        // res.status(200).send(tasks)
     } catch(error) {
         res.status(500).send(error)
     }

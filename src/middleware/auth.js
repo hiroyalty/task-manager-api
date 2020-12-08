@@ -10,7 +10,7 @@ const auth = async (req, res, next) => {
         if(!user) {
             throw new Error()
         }
-        
+      
         req.token = token
         req.user = user // better to attach user now than re-query after middleware and consume too much resource
         next()

@@ -17,9 +17,9 @@ router.post('/users', async (req, res) => {
         const token = await user.generateAuthToken()
         res.status(201).send({ user, token })
     } catch (error) {
-        res.status(400).send(error)
+        res.status(400).send(error) 
     }
-})
+}) 
 
 router.post('/users/login', async (req, res) => {
     try {
@@ -145,7 +145,7 @@ router.get('/users/:id/avatar', async(req, res) => {
         res.status(400).send()
     }
 })
-
+ 
 // Good for Administrator to use to see a ordinary user details
 // router.get('/users/:id', async (req, res) => {
 //     const _id = req.params.id

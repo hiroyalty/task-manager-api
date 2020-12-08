@@ -1,5 +1,5 @@
 # task-manager-api
-A Node Express Restful webservice Application with Mongo DB.
+A Node Express Restful webservice Application with Mongo DB. With Unit testing and Continous Integration Functionality
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

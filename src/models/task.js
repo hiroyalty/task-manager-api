@@ -1,11 +1,15 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
+const validator = require('validator')
 
 const taskSchema = new mongoose.Schema({
     description: { 
         type: String,
         required: true,
         trim: true,
+        validate(value) {
+            if ( validator.isInt(value)) throw new Error('Description cannot be Number')
+        }
      },
     completed: {
         type: Boolean,
@@ -24,7 +28,7 @@ const taskSchema = new mongoose.Schema({
 taskSchema.pre('save', async function(next) {
     const task = this
 
-    console.log('Just before task updated')
+    //console.log('Just before task updated')
 
     next()
 })
